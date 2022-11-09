@@ -208,16 +208,18 @@ typedef sptr_t (*SciFnDirectStatus)(sptr_t ptr, unsigned int iMessage, uptr_t wP
 #define SCI_GETMARGINBACKN 2251
 #define SCI_SETMARGINS 2252
 #define SCI_GETMARGINS 2253
-#define STYLE_DEFAULT 32
-#define STYLE_LINENUMBER 33
-#define STYLE_BRACELIGHT 34
-#define STYLE_BRACEBAD 35
-#define STYLE_CONTROLCHAR 36
-#define STYLE_INDENTGUIDE 37
-#define STYLE_CALLTIP 38
-#define STYLE_FOLDDISPLAYTEXT 39
-#define STYLE_LASTPREDEFINED 39
+//=================inc-new-flag================
+#define STYLE_DEFAULT 55  // old=32
+#define STYLE_LINENUMBER 56
+#define STYLE_BRACELIGHT 57
+#define STYLE_BRACEBAD 58
+#define STYLE_CONTROLCHAR 59
+#define STYLE_INDENTGUIDE 60
+#define STYLE_CALLTIP 61
+#define STYLE_FOLDDISPLAYTEXT 62
+#define STYLE_LASTPREDEFINED 62
 #define STYLE_MAX 255
+//=================inc-new-end================
 #define SC_CHARSET_ANSI 0
 #define SC_CHARSET_DEFAULT 1
 #define SC_CHARSET_BALTIC 186

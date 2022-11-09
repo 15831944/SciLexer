@@ -750,6 +750,7 @@ void LexState::SetLexer(uptr_t wParam) {
 		SetLexerModule(nullptr);
 	}
 	else{
+		const char* ext=LexerNameFromID(lexLanguage); // ≥ı ºªØ
 		const Lexilla::LexerModule* lex = Lexilla::catalogueLexilla.Find(lexLanguage);
 		if (!lex)
 			lex = Lexilla::catalogueLexilla.Find(NULL);

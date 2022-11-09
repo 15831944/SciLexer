@@ -358,7 +358,7 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <IntDir>build\cache\$(Configuration)\</IntDir>
-    <OutDir>$(SolutionDir)build\$(Configuration)\</OutDir>
+    <OutDir>build\$(Configuration)\</OutDir>
     <IncludePath>$(SolutionDir);$(IncludePath)</IncludePath>
     <TargetExt>.lib</TargetExt>
   </PropertyGroup>
