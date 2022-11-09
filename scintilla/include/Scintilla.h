@@ -1177,6 +1177,9 @@ typedef sptr_t (*SciFnDirectStatus)(sptr_t ptr, unsigned int iMessage, uptr_t wP
 #define SCI_TAGSOFSTYLE 4031
 #define SCI_DESCRIPTIONOFSTYLE 4032
 #define SCI_SETILEXER 4033
+//=================inc-new-flag================
+#define SCI_SETLEXER 4034
+//=================inc-new-end================
 #define SC_MOD_NONE 0x0
 #define SC_MOD_INSERTTEXT 0x1
 #define SC_MOD_DELETETEXT 0x2

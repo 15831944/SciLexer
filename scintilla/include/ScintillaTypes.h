@@ -10,7 +10,9 @@
 
 #ifndef SCINTILLATYPES_H
 #define SCINTILLATYPES_H
-
+//=================inc-new-flag================
+#include <Scintilla.h>
+//=================inc-new-end================
 namespace Scintilla {
 
 // Enumerations
@@ -115,15 +117,17 @@ enum class MarginType {
 };
 
 enum class StylesCommon {
-	Default = 32,
-	LineNumber = 33,
-	BraceLight = 34,
-	BraceBad = 35,
-	ControlChar = 36,
-	IndentGuide = 37,
-	CallTip = 38,
-	FoldDisplayText = 39,
-	LastPredefined = 39,
+	//=================inc-new-flag================
+	Default = STYLE_DEFAULT,
+	LineNumber = STYLE_LINENUMBER,
+	BraceLight = STYLE_BRACELIGHT,
+	BraceBad = STYLE_BRACEBAD,
+	ControlChar = STYLE_CONTROLCHAR,
+	IndentGuide = STYLE_INDENTGUIDE,
+	CallTip = STYLE_CALLTIP,
+	FoldDisplayText = STYLE_FOLDDISPLAYTEXT,
+	LastPredefined = STYLE_LASTPREDEFINED,
+	//=================inc-new-end================
 	Max = 255,
 };
 
