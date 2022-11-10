@@ -155,6 +155,7 @@ void MarginView::RefreshPixMaps(Surface *surfaceWindow, const ViewStyle &vsDraw)
 
 		pixmapSelPattern->FillRectangle(rcPattern, colourFMFill);
 		pixmapSelPatternOffset1->FillRectangle(rcPattern, colourFMStripes);
+		
 		for (int y = 0; y < patternSize; y++) {
 			for (int x = y % 2; x < patternSize; x += 2) {
 				const PRectangle rcPixel = PRectangle::FromInts(x, y, x + 1, y + 1);
@@ -162,6 +163,7 @@ void MarginView::RefreshPixMaps(Surface *surfaceWindow, const ViewStyle &vsDraw)
 				pixmapSelPatternOffset1->FillRectangle(rcPixel, colourFMFill);
 			}
 		}
+		
 		pixmapSelPattern->FlushDrawing();
 		pixmapSelPatternOffset1->FlushDrawing();
 	}
