@@ -389,7 +389,7 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <IntDir>build\cache\$(Configuration)\</IntDir>
-    <OutDir>$(SolutionDir)build\$(Configuration)\</OutDir>
+    <OutDir>build\$(Configuration)\</OutDir>
   </PropertyGroup>
   <ItemDefinitionGroup>
     <ClCompile>

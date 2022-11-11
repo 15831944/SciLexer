@@ -152,7 +152,8 @@ void MarginView::RefreshPixMaps(Surface *surfaceWindow, const ViewStyle &vsDraw)
 			// override default fold margin highlight colour
 			colourFMStripes = *vsDraw.foldmarginHighlightColour;
 		}
-
+		//=================inc-new-flag-notes================
+		//ÕÛµþ±³¾°»æÖÆ
 		pixmapSelPattern->FillRectangle(rcPattern, colourFMFill);
 		pixmapSelPatternOffset1->FillRectangle(rcPattern, colourFMStripes);
 		
@@ -166,6 +167,7 @@ void MarginView::RefreshPixMaps(Surface *surfaceWindow, const ViewStyle &vsDraw)
 		
 		pixmapSelPattern->FlushDrawing();
 		pixmapSelPatternOffset1->FlushDrawing();
+		//=================inc-new-end-notes================
 	}
 }
 

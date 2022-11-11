@@ -527,16 +527,18 @@ void ScintillaBase::ContextMenu(Point pt) {
 	if (displayPopupMenu != PopUp::Never) {
 		const bool writable = !WndProc(Message::GetReadOnly, 0, 0);
 		popup.CreatePopUp();
-		AddToPopUp("Undo", idcmdUndo, writable && pdoc->CanUndo());
-		AddToPopUp("Redo", idcmdRedo, writable && pdoc->CanRedo());
+		//=================inc-new-flag================
+		AddToPopUp("撤销(&U)", idcmdUndo, writable && pdoc->CanUndo());
+		AddToPopUp("重做(&R)", idcmdRedo, writable && pdoc->CanRedo());
 		AddToPopUp("");
-		AddToPopUp("Cut", idcmdCut, writable && !sel.Empty());
-		AddToPopUp("Copy", idcmdCopy, !sel.Empty());
-		AddToPopUp("Paste", idcmdPaste, writable && WndProc(Message::CanPaste, 0, 0));
-		AddToPopUp("Delete", idcmdDelete, writable && !sel.Empty());
+		AddToPopUp("剪切(&T)", idcmdCut, writable && !sel.Empty());
+		AddToPopUp("复制(&C)", idcmdCopy, !sel.Empty());
+		AddToPopUp("粘贴(&P)", idcmdPaste, writable && WndProc(Message::CanPaste, 0, 0));
+		AddToPopUp("删除(&D)", idcmdDelete, writable && !sel.Empty());
 		AddToPopUp("");
-		AddToPopUp("Select All", idcmdSelectAll);
+		AddToPopUp("全选(&A)", idcmdSelectAll);
 		popup.Show(pt, wMain);
+		//=================inc-new-end================
 	}
 }
 
@@ -555,9 +557,9 @@ void ScintillaBase::RightButtonDownWithModifiers(Point pt, unsigned int curTime,
 	CancelModes();
 	Editor::RightButtonDownWithModifiers(pt, curTime, modifiers);
 }
-
+//=================inc-new-flag================
 #include <import/ScintillaBase_c_inc.h>
-
+//=================inc-new-end================
 namespace Scintilla::Internal {
 
 class LexState : public LexInterface {
