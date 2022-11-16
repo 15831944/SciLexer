@@ -167,7 +167,9 @@ ViewStyle::ViewStyle(size_t stylesSize_) :
 	elementBaseColours[Element::SelectionBack] = ColourRGBA(0xc0, 0xc0, 0xc0, 0xff);
 	elementBaseColours[Element::SelectionAdditionalBack] = ColourRGBA(0xd7, 0xd7, 0xd7, 0xff);
 	elementBaseColours[Element::SelectionSecondaryBack] = ColourRGBA(0xb0, 0xb0, 0xb0, 0xff);
-	elementBaseColours[Element::SelectionInactiveBack] = ColourRGBA(0x80, 0x80, 0x80, 0x3f);
+	//=================inc-new-flag================
+	//elementBaseColours[Element::SelectionInactiveBack] = ColourRGBA(0x80, 0x80, 0x80, 0x3f);
+	
 	elementAllowsTranslucent.insert({
 		Element::SelectionText,
 		Element::SelectionBack,
@@ -175,10 +177,10 @@ ViewStyle::ViewStyle(size_t stylesSize_) :
 		Element::SelectionAdditionalBack,
 		Element::SelectionSecondaryText,
 		Element::SelectionSecondaryBack,
-		Element::SelectionInactiveText,
-		Element::SelectionInactiveBack,
+		//Element::SelectionInactiveText,
+		//Element::SelectionInactiveBack,
 		});
-
+	//=================inc-new-end================
 	foldmarginColour.reset();
 	foldmarginHighlightColour.reset();
 
